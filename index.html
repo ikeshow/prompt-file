@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AIプロンプト集</title>
+  <meta name="description" content="業務でそのまま使える30種の高品質AIプロンプト集" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">AIプロンプト集</h1>
+    <div class="search-wrap" role="search">
+      <label for="searchInput" class="visually-hidden">プロンプト検索</label>
+      <input id="searchInput" type="search" placeholder="キーワードで検索 (例: SWOT, 採用, 企画)" autocomplete="off" />
+    </div>
+    <button id="themeToggle" class="theme-toggle" aria-pressed="false" title="テーマ切替">🌓</button>
+  </header>
+
+  <main id="main" class="layout" tabindex="-1">
+    <aside class="sidebar" aria-label="カテゴリ">
+      <nav id="categoryNav" class="category-nav" aria-label="プロンプトカテゴリ一覧">
+        </nav>
+    </aside>
+
+    <section class="content" aria-live="polite" aria-busy="false">
+      <div id="promptSummary" class="prompt-summary">カテゴリを選択、または検索してください。</div>
+      <ul id="promptList" class="prompt-list" data-empty-message="該当するプロンプトがありません。"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Prompt Library. 利用上の注意: 出力結果は必ず事実確認してください。機密情報は入力しないでください。</p>
+  </footer>
+
+  <template id="promptItemTemplate">
+    <li class="prompt-item" data-id="">
+      <div class="prompt-item__head">
+        <h3 class="prompt-item__title"></h3>
+        <div class="prompt-item__actions">
+          <button type="button" class="btn-copy" title="プロンプトをコピー" aria-label="プロンプトをコピー">コピー</button>
+        </div>
+      </div>
+      <p class="prompt-item__category"></p>
+      <div class="prompt-item__prompt-wrap" hidden>
+        <pre class="prompt-item__prompt" tabindex="0"></pre>
+      </div>
+      <button type="button" class="btn-show-details" aria-expanded="false" aria-label="詳細を見る">詳細を見る</button>
+      <div class="copy-feedback" role="status" aria-live="polite" hidden>コピーしました</div>
+    </li>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
