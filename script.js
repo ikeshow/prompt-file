@@ -339,5 +339,3 @@ themeToggle.addEventListener('click', () => {
 /* ===== 初期化 ===== */
 renderCategories();
 renderList();
-	
-	
