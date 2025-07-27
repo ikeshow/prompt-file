@@ -20,12 +20,15 @@
   <main id="main" class="layout" tabindex="-1">
     <aside class="sidebar" aria-label="カテゴリ">
       <nav id="categoryNav" class="category-nav" aria-label="プロンプトカテゴリ一覧">
-        </nav>
+        <!-- ここにJSでカテゴリが生成されます -->
+      </nav>
     </aside>
 
     <section class="content" aria-live="polite" aria-busy="false">
       <div id="promptSummary" class="prompt-summary">カテゴリを選択、または検索してください。</div>
-      <ul id="promptList" class="prompt-list" data-empty-message="該当するプロンプトがありません。"></ul>
+      <ul id="promptList" class="prompt-list" data-empty-message="該当するプロンプトがありません。">
+        <!-- ここにJSでプロンプトが生成されます -->
+      </ul>
     </section>
   </main>
 
